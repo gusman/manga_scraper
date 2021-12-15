@@ -28,7 +28,7 @@ class BaseSpider(scrapy.Spider):
 
         list_cl = [ [name.strip(), self.base_url + link.strip()] for (name, link) in zip(chapter_names, chapter_links) ]
 
-        for cl in list_cl:
+        for cl in list_cl[:1]:
             c_url = cl[1]
             yield SplashRequest(
                     c_url, 
@@ -52,10 +52,15 @@ class BaseSpider(scrapy.Spider):
 
 class RotlSpider(BaseSpider):
     name = 'rotl'
-    start_urls = ['https://mangajar.com/manga/ruler-of-the-land']
+    start_urls = ['https://mangajar.com/manga/ruler-of-the-land-abs3VDC']
     manga_title = 'ruler-of-the-land'
 
 class AodIISpider(BaseSpider):
     name = 'aod2'
     start_urls = ['https://mangajar.com/manga/diamond-no-ace-act-ii']
     manga_title = 'ace-of-diamond-2'
+
+class KnyaSpider(BaseSpider):
+    name = 'knya'
+    start_urls = ['https://mangajar.com/manga/kimetsu-no-yaiba']
+    manga_title = 'kinematsu-no-yaiba'

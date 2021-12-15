@@ -101,6 +101,6 @@ SPLASH_SLOT_POLICY = scrapy_splash.SlotPolicy.PER_DOMAIN
 # Custom settings
 import os
 CUR_DIR = os.getcwd()
-SQLITE3_PATH = CUR_DIR + '/db_tracking.db'
-MANGA_DIR = CUR_DIR + '/manga_dir'
+SQLITE3_PATH = CUR_DIR + '/../db_tracking.db'
+MANGA_DIR = CUR_DIR + '/../manga_dir'
 IMG_DOWNLOAD_DELAY = 2
