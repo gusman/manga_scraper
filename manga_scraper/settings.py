@@ -104,3 +104,4 @@ CUR_DIR = os.getcwd()
 SQLITE3_PATH = CUR_DIR + '/../db_tracking.db'
 MANGA_DIR = CUR_DIR + '/../manga_dir'
 IMG_DOWNLOAD_DELAY = 2
+N_LAST_CHAPTER = 15

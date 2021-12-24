@@ -27,8 +27,10 @@ class BaseSpider(scrapy.Spider):
         chapter_names = response.xpath('//span[@class="chapter-title"]/text()').getall()
 
         list_cl = [ [name.strip(), self.base_url + link.strip()] for (name, link) in zip(chapter_names, chapter_links) ]
+        n_last_chapter = self.settings['N_LAST_CHAPTER']
 
-        for cl in list_cl[:1]:
+        for cl in list_cl[:n_last_chapter
+                ]:
             c_url = cl[1]
             yield SplashRequest(
                     c_url, 
